@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growfax Host</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+      background: url('growtopia.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, .downloads, footer, .banner, .discord-section {
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .banner {
+      max-width: 420px;
+      width: 80%;
+      margin-top: 70px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      animation-delay: 0.3s;
+    }
+
+    h1 {
+      font-size: 2em;
+      animation-delay: 0.6s;
+      margin-top: 20px;
+      color: #00ffee;
+      letter-spacing: 0.5px;
+    }
+
+    .downloads {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0 80px 0;
+      max-width: 900px;
+      animation-delay: 0.8s;
+    }
+
+    .file-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 18px 15px;
+      width: 220px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      text-align: left;
+      backdrop-filter: blur(6px);
+      position: relative;
+      z-index: 2;
+    }
+
+    .file-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 18px rgba(0,255,255,0.4);
+    }
+
+    .file-card img {
+      display: block;
+      margin: 0 auto 8px auto;
+      width: 55px;
+      height: 55px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    }
+
+    .file-card a {
+      text-align: center;
+      display: block;
+      font-size: 1em;
+      font-weight: 600;
+      text-decoration: none;
+      color: #00ffee;
+      margin-bottom: 6px;
+      border: 1px solid #00ffee33;
+      border-radius: 6px;
+      padding: 6px 0;
+      background: rgba(0,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .file-card a:hover {
+      background: rgba(0,255,255,0.25);
+      box-shadow: 0 0 10px #00ffee88;
+    }
+
+    .steps {
+      font-size: 0.85em;
+      color: #e8f5e9;
+      line-height: 1.5em;
+      margin-top: 8px;
+    }
+
+    footer {
+      font-size: 0.85em;
+      margin: 30px 0;
+      z-index: 2;
+      animation-delay: 1.1s;
+      color: #00ffee;
+      letter-spacing: 0.3px;
+    }
+
+    .discord-section {
+      position: relative;
+      text-align: center;
+      margin-bottom: 50px;
+      animation-delay: 1s;
+      z-index: 2;
+    }
+
+    .discord-icon {
+      width: 70px;
+      height: 70px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(88, 101, 242, 0.6);
+    }
+
+    .discord-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(88, 101, 242, 0.9);
+    }
+
+    .discord-text {
+      display: block;
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #dcdcff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .discord-text:hover {
+      color: #7289da;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .file-card { width: 85%; }
+      .banner { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <img class="banner" src="https://growfaxplay2.odoo.com/Growfax_banner.png" alt="Growfax Banner" />
+  <h1>Growfax Host</h1>
+
+  <div class="downloads">
+    <div class="file-card">
+      <img src="https://growfaxplay2.odoo.com/windows.png" alt="Windows Icon">
+      <a href="https://growfaxplay2.odoo.com/Growfax_Patched_.bat" download>Download Windows</a>
+      <div class="steps">
+        <strong>Steps:</strong><br>
+        1. Press ⊞ Win+R → open "Run".<br>
+        2. Go to <code>C:\Windows\System32\drivers\etc</code>.<br>
+        3. Edit <strong>hosts</strong> → Add IP → Save.
+      </div>
+    </div>
+
+    <div class="file-card">
+      <img src="https://growfaxplay2.odoo.com/surge5.png" alt="iOS Icon">
+      <a href="https://growfaxplay2.odoo.com/GrowFax%20ios.txt" download>Download iOS</a>
+      <div class="steps">
+        <strong>Steps:</strong><br>
+        1. Install <strong>Surge 5</strong>.<br>
+        2. Import Profile → URL above.<br>
+        3. Setup → Allow VPN → Done.
+      </div>
+    </div>
+
+    <div class="file-card">
+      <img src="https://growfaxplay2.odoo.com/powertunnel.jpeg" alt="PowerTunnel Icon">
+      <a href="https://growfaxplay2.odoo.com/PowerTunel_Host.txt" download>Download PowerTunnel</a>
+      <div class="steps">
+        <strong>Steps:</strong><br>
+        1. Install <strong>PowerTunnel</strong>.<br>
+        2. Copy host link → Paste in app.<br>
+        3. Set update → “On Start”.
+      </div>
+    </div>
+
+    <div class="file-card">
+      <img src="https://growfaxplay2.odoo.com/virtual-host.png" alt="VirtualHost Icon">
+      <a href="https://growfaxplay2.odoo.com/Growfax_VirtualHost.txt" download>Download VirtualHost</a>
+      <div class="steps">
+        <strong>Steps:</strong><br>
+        1. Install <strong>VirtualHost</strong>.<br>
+        2. Paste config → Activate VPN.
+      </div>
+    </div>
+  </div>
+
+  <div class="discord-section">
+    <a href="https://discord.gg/smgS6sq83y" target="_blank">
+      <img src="discord.jpeg" alt="Discord" class="discord-icon" />
+    </a>
+    <a href="https://discord.gg/smgS6sq83y" target="_blank" class="discord-text">Join our server</a>
+  </div>
+
+  <footer>© 2025 <span style="color:#00ffe0;">VivJ</span> — Powered by <span style="color:#00ffe0;">Growfax</span></footer>
+</body>
+</html>
